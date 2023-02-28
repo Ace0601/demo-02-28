@@ -16,9 +16,9 @@
     <p style="font-size:12px;">This is the 'person' view, a sample view created on Feb 28, 2023.</p>
 
     <hr>
-        <p>Name: {{ $name }}<br>
-        Age: {{ $age }} </p>
-        <p>Status</p> 
+        <p><b>Name:</b> {{ $name }}<br>
+        <b>Age:</b> {{ $age }} </p>
+        <p><b>Status:</b></p> 
         @if($age < 18)
             <p style="color: red;">You can't vote</p>
         @else
@@ -30,7 +30,7 @@
     <table>
         <thead>
             <tr>
-                <th>#/th>
+                <th>#</th>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Status</th>
@@ -43,7 +43,7 @@
 
                 <td align="right">{{ $loop->index + 1 }}</td>
                 <td>{{$sibling['name']}}</td>
-                <td>{$sibling['age']}}</td>
+                <td>{{$sibling['age']}}</td>
                 <td>
                 @if($sibling['age'] < 18)
                     <p style="color: red;">You can't vote</p>
